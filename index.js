@@ -24,7 +24,7 @@ app.post('/order-complete', (req, res) => {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                content: '💰 **ORDER COMPLETED**\n\nCustomer: ' + customerEmail + '\nTotal: $' + totalPrice + '\nItems: ' + itemCount + '\n\n' + productNames
+                content: '💰 **ORDER COMPLETED** <@&1462928286324883528>\n\nCustomer: ' + customerEmail + '\nTotal: $' + totalPrice + '\nItems: ' + itemCount + '\n\n' + productNames
             })
         }).catch(() => {});
 
