@@ -144,3 +144,12 @@ app.post('/order-complete', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
     console.log('🎯 Enhanced order webhook live on port ' + PORT);
 });
+app.post('/order-complete', (req, res) => {
+    try {
+        const order = req.body;
+        
+        // DEBUG: Log all cookies
+        console.log('🔍 All cookies received:', req.get('Cookie'));
+        console.log('🔍 Order data:', JSON.stringify(order, null, 2));
+        
+        // Rest of your webhook code...
